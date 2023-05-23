@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue May 23 23:53:27 2023
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : LSD
+Top-level Entity Name : clock24
+Family : Cyclone IV E
+Total logic elements : 362
+    Total combinational functions : 341
+    Dedicated logic registers : 218
+Total registers : 218
+Total pins : 30
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

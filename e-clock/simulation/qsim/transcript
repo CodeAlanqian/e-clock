@@ -1,0 +1,80 @@
+# do LSD.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:34 on Feb 26,2023
+# vlog -work work LSD.vo 
+# -- Compiling module sec
+# 
+# Top level modules:
+# 	sec
+# End time: 19:41:34 on Feb 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 19:41:34 on Feb 26,2023
+# vlog -work work sec.vwf.vt 
+# -- Compiling module sec_vlg_sample_tst
+# -- Compiling module sec_vlg_check_tst
+# -- Compiling module sec_vlg_vec_tst
+# 
+# Top level modules:
+# 	sec_vlg_vec_tst
+# End time: 19:41:34 on Feb 26,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -do "LSD.do" 
+# Start time: 19:41:34 on Feb 26,2023
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# 
+# //  ModelSim SE-64 10.4 Dec  3 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# Refreshing E:/DC_WS/clock/Test01/simulation/qsim/work.sec_vlg_vec_tst
+# Loading work.sec_vlg_vec_tst
+# ** Error: (vsim-19) Failed to access library '220model_ver' at "220model_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'sgate' at "sgate".
+# 
+# No such file or directory. (errno = ENOENT)
+# Refreshing E:/DC_WS/clock/Test01/simulation/qsim/work.sec
+# Loading work.sec
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# ** Error: (vsim-19) Failed to access library '220model_ver' at "220model_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'sgate' at "sgate".
+# 
+# No such file or directory. (errno = ENOENT)
+# Refreshing E:/DC_WS/clock/Test01/simulation/qsim/work.sec_vlg_sample_tst
+# Loading work.sec_vlg_sample_tst
+# ** Error: (vsim-19) Failed to access library '220model_ver' at "220model_ver".
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vsim-19) Failed to access library 'sgate' at "sgate".
+# 
+# No such file or directory. (errno = ENOENT)
+# Refreshing E:/DC_WS/clock/Test01/simulation/qsim/work.sec_vlg_check_tst
+# Loading work.sec_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+# Simulation passed !
+# ** Note: $finish    : sec.vwf.vt(312)
+#    Time: 1 us  Iteration: 0  Instance: /sec_vlg_vec_tst/tb_out
+# End time: 19:41:36 on Feb 26,2023, Elapsed time: 0:00:02
+# Errors: 6, Warnings: 1

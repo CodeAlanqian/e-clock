@@ -1,0 +1,516 @@
+Analysis & Synthesis report for LSD
+Tue May 23 23:53:27 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: switch:inst|74161:inst
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue May 23 23:53:27 2023       ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name                      ; LSD                                         ;
+; Top-level Entity Name              ; clock24                                     ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 362                                         ;
+;     Total combinational functions  ; 341                                         ;
+;     Dedicated logic registers      ; 218                                         ;
+; Total registers                    ; 218                                         ;
+; Total pins                         ; 30                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                                      ; clock24            ; LSD                ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ; < 0.1%      ;
+;     Processors 7-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------+---------+
+; 100f.bdf                         ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/100f.bdf                   ;         ;
+; cnt-100.bdf                      ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/cnt-100.bdf                ;         ;
+; cnt-25.bdf                       ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/cnt-25.bdf                 ;         ;
+; cnt-2.bdf                        ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/cnt-2.bdf                  ;         ;
+; mxh.bdf                          ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/mxh.bdf                    ;         ;
+; but.bdf                          ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/but.bdf                    ;         ;
+; switch.bdf                       ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/switch.bdf                 ;         ;
+; sec.bdf                          ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/sec.bdf                    ;         ;
+; min.bdf                          ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/min.bdf                    ;         ;
+; hour.bdf                         ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/hour.bdf                   ;         ;
+; hour12.bdf                       ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/hour12.bdf                 ;         ;
+; clock24.bdf                      ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/clock24.bdf                ;         ;
+; 7447pro.bdf                      ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/7447pro.bdf                ;         ;
+; clk_100.bdf                      ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/clk_100.bdf                ;         ;
+; ANDpro.bdf                       ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/ANDpro.bdf                 ;         ;
+; butpro.bdf                       ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/butpro.bdf                 ;         ;
+; clk_2.bdf                        ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/clk_2.bdf                  ;         ;
+; LEDpro.bdf                       ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/LEDpro.bdf                 ;         ;
+; 3c1.bdf                          ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/3c1.bdf                    ;         ;
+; 2c1.bdf                          ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/2c1.bdf                    ;         ;
+; clk_25.bdf                       ; yes             ; User Block Diagram/Schematic File        ; E:/DC_WS/opensource/clock/Test01/clk_25.bdf                 ;         ;
+; 74160.bdf                        ; yes             ; Megafunction                             ; d:/altera/13.1/quartus/libraries/others/maxplus2/74160.bdf  ;         ;
+; 7447.bdf                         ; yes             ; Megafunction                             ; d:/altera/13.1/quartus/libraries/others/maxplus2/7447.bdf   ;         ;
+; 74138.bdf                        ; yes             ; Megafunction                             ; d:/altera/13.1/quartus/libraries/others/maxplus2/74138.bdf  ;         ;
+; 74161.tdf                        ; yes             ; Megafunction                             ; d:/altera/13.1/quartus/libraries/others/maxplus2/74161.tdf  ;         ;
+; aglobal.inc                      ; yes             ; Megafunction                             ; d:/altera/13.1/quartus/libraries/megafunctions/aglobal.inc  ;         ;
+; f74161.bdf                       ; yes             ; Megafunction                             ; d:/altera/13.1/quartus/libraries/others/maxplus2/f74161.bdf ;         ;
+; clk_1k.bdf                       ; yes             ; Auto-Found Block Diagram/Schematic File  ; E:/DC_WS/opensource/clock/Test01/clk_1k.bdf                 ;         ;
+; 21mux.bdf                        ; yes             ; Megafunction                             ; d:/altera/13.1/quartus/libraries/others/maxplus2/21mux.bdf  ;         ;
+; 74153.bdf                        ; yes             ; Megafunction                             ; d:/altera/13.1/quartus/libraries/others/maxplus2/74153.bdf  ;         ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 362       ;
+;                                             ;           ;
+; Total combinational functions               ; 341       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 168       ;
+;     -- 3 input functions                    ; 125       ;
+;     -- <=2 input functions                  ; 48        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 341       ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 218       ;
+;     -- Dedicated logic registers            ; 218       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 30        ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 40        ;
+; Total fan-out                               ; 1629      ;
+; Average fan-out                             ; 2.63      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+--------------+
+; |clock24                   ; 341 (45)          ; 218 (0)      ; 0           ; 0            ; 0       ; 0         ; 30   ; 0            ; |clock24                                         ; work         ;
+;    |100f:inst59|           ; 13 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|100f:inst59                             ; work         ;
+;       |74160:inst1|        ; 8 (8)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|100f:inst59|74160:inst1                 ; work         ;
+;       |74160:inst|         ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|100f:inst59|74160:inst                  ; work         ;
+;    |7447pro:inst11|        ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|7447pro:inst11                          ; work         ;
+;       |7447:inst|          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|7447pro:inst11|7447:inst                ; work         ;
+;    |butpro:inst9|          ; 14 (0)            ; 28 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|butpro:inst9                            ; work         ;
+;       |but:inst1|          ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|butpro:inst9|but:inst1                  ; work         ;
+;       |but:inst2|          ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|butpro:inst9|but:inst2                  ; work         ;
+;       |but:inst3|          ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|butpro:inst9|but:inst3                  ; work         ;
+;       |but:inst4|          ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|butpro:inst9|but:inst4                  ; work         ;
+;       |but:inst5|          ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|butpro:inst9|but:inst5                  ; work         ;
+;       |but:inst6|          ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|butpro:inst9|but:inst6                  ; work         ;
+;       |but:inst|           ; 2 (2)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|butpro:inst9|but:inst                   ; work         ;
+;    |clk_100:inst3|         ; 36 (0)            ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_100:inst3                           ; work         ;
+;       |cnt-100:inst1|      ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_100:inst3|cnt-100:inst1             ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_100:inst3|cnt-100:inst1|74160:inst1 ; work         ;
+;          |74160:inst|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_100:inst3|cnt-100:inst1|74160:inst  ; work         ;
+;       |cnt-100:inst|       ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_100:inst3|cnt-100:inst              ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_100:inst3|cnt-100:inst|74160:inst1  ; work         ;
+;          |74160:inst|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_100:inst3|cnt-100:inst|74160:inst   ; work         ;
+;       |cnt-25:inst2|       ; 15 (3)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_100:inst3|cnt-25:inst2              ; work         ;
+;          |74160:inst1|     ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_100:inst3|cnt-25:inst2|74160:inst1  ; work         ;
+;          |74160:inst|      ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_100:inst3|cnt-25:inst2|74160:inst   ; work         ;
+;       |cnt-2:inst3|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_100:inst3|cnt-2:inst3               ; work         ;
+;    |clk_1k:inst35|         ; 22 (0)            ; 18 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_1k:inst35                           ; work         ;
+;       |cnt-100:inst3|      ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_1k:inst35|cnt-100:inst3             ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_1k:inst35|cnt-100:inst3|74160:inst1 ; work         ;
+;          |74160:inst|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_1k:inst35|cnt-100:inst3|74160:inst  ; work         ;
+;       |cnt-100:inst|       ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_1k:inst35|cnt-100:inst              ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_1k:inst35|cnt-100:inst|74160:inst1  ; work         ;
+;          |74160:inst|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_1k:inst35|cnt-100:inst|74160:inst   ; work         ;
+;       |cnt-2:inst1|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_1k:inst35|cnt-2:inst1               ; work         ;
+;       |cnt-2:inst2|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_1k:inst35|cnt-2:inst2               ; work         ;
+;    |clk_25:inst60|         ; 37 (0)            ; 26 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_25:inst60                           ; work         ;
+;       |cnt-100:inst1|      ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_25:inst60|cnt-100:inst1             ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_25:inst60|cnt-100:inst1|74160:inst1 ; work         ;
+;          |74160:inst|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_25:inst60|cnt-100:inst1|74160:inst  ; work         ;
+;       |cnt-100:inst|       ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_25:inst60|cnt-100:inst              ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_25:inst60|cnt-100:inst|74160:inst1  ; work         ;
+;          |74160:inst|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_25:inst60|cnt-100:inst|74160:inst   ; work         ;
+;       |cnt-25:inst2|       ; 15 (3)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_25:inst60|cnt-25:inst2              ; work         ;
+;          |74160:inst1|     ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_25:inst60|cnt-25:inst2|74160:inst1  ; work         ;
+;          |74160:inst|      ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_25:inst60|cnt-25:inst2|74160:inst   ; work         ;
+;       |cnt-2:inst3|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_25:inst60|cnt-2:inst3               ; work         ;
+;       |cnt-2:inst5|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_25:inst60|cnt-2:inst5               ; work         ;
+;    |clk_2:inst20|          ; 43 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20                            ; work         ;
+;       |cnt-100:inst7|      ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20|cnt-100:inst7              ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20|cnt-100:inst7|74160:inst1  ; work         ;
+;          |74160:inst|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20|cnt-100:inst7|74160:inst   ; work         ;
+;       |cnt-100:inst8|      ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20|cnt-100:inst8              ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20|cnt-100:inst8|74160:inst1  ; work         ;
+;          |74160:inst|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20|cnt-100:inst8|74160:inst   ; work         ;
+;       |cnt-100:inst|       ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20|cnt-100:inst               ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20|cnt-100:inst|74160:inst1   ; work         ;
+;          |74160:inst|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20|cnt-100:inst|74160:inst    ; work         ;
+;       |cnt-25:inst1|       ; 13 (2)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20|cnt-25:inst1               ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20|cnt-25:inst1|74160:inst1   ; work         ;
+;          |74160:inst|      ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|clk_2:inst20|cnt-25:inst1|74160:inst    ; work         ;
+;    |hour12:inst38|         ; 13 (1)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|hour12:inst38                           ; work         ;
+;       |74160:inst1|        ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|hour12:inst38|74160:inst1               ; work         ;
+;       |74160:inst|         ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|hour12:inst38|74160:inst                ; work         ;
+;    |hour:inst4|            ; 13 (1)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|hour:inst4                              ; work         ;
+;       |74160:inst1|        ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|hour:inst4|74160:inst1                  ; work         ;
+;       |74160:inst|         ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|hour:inst4|74160:inst                   ; work         ;
+;    |min:inst36|            ; 10 (2)            ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|min:inst36                              ; work         ;
+;       |74160:inst1|        ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|min:inst36|74160:inst1                  ; work         ;
+;       |74160:inst|         ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|min:inst36|74160:inst                   ; work         ;
+;    |min:inst5|             ; 10 (2)            ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|min:inst5                               ; work         ;
+;       |74160:inst1|        ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|min:inst5|74160:inst1                   ; work         ;
+;       |74160:inst|         ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|min:inst5|74160:inst                    ; work         ;
+;    |mxh:inst1|             ; 46 (0)            ; 33 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1                               ; work         ;
+;       |cnt-100:inst2|      ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-100:inst2                 ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-100:inst2|74160:inst1     ; work         ;
+;          |74160:inst|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-100:inst2|74160:inst      ; work         ;
+;       |cnt-100:inst3|      ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-100:inst3                 ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-100:inst3|74160:inst1     ; work         ;
+;          |74160:inst|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-100:inst3|74160:inst      ; work         ;
+;       |cnt-100:inst|       ; 10 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-100:inst                  ; work         ;
+;          |74160:inst1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-100:inst|74160:inst1      ; work         ;
+;          |74160:inst|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-100:inst|74160:inst       ; work         ;
+;       |cnt-25:inst4|       ; 15 (3)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-25:inst4                  ; work         ;
+;          |74160:inst1|     ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-25:inst4|74160:inst1      ; work         ;
+;          |74160:inst|      ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-25:inst4|74160:inst       ; work         ;
+;       |cnt-2:inst5|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|mxh:inst1|cnt-2:inst5                   ; work         ;
+;    |sec:inst34|            ; 13 (1)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|sec:inst34                              ; work         ;
+;       |74160:inst1|        ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|sec:inst34|74160:inst1                  ; work         ;
+;       |74160:inst|         ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|sec:inst34|74160:inst                   ; work         ;
+;    |sec:inst6|             ; 10 (2)            ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|sec:inst6                               ; work         ;
+;       |74160:inst1|        ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|sec:inst6|74160:inst1                   ; work         ;
+;       |74160:inst|         ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|sec:inst6|74160:inst                    ; work         ;
+;    |switch:inst|           ; 9 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|switch:inst                             ; work         ;
+;       |74138:inst2|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|switch:inst|74138:inst2                 ; work         ;
+;       |74161:inst|         ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|switch:inst|74161:inst                  ; work         ;
+;          |f74161:sub|      ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock24|switch:inst|74161:inst|f74161:sub       ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; sec:inst6|74160:inst1|9               ; Stuck at GND due to stuck port data_in ;
+; min:inst5|74160:inst1|9               ; Stuck at GND due to stuck port data_in ;
+; min:inst36|74160:inst1|9              ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 3 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 218   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 30    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: switch:inst|74161:inst ;
++------------------------+--------------+-----------------------------+
+; Parameter Name         ; Value        ; Type                        ;
++------------------------+--------------+-----------------------------+
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE              ;
++------------------------+--------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Processing started: Tue May 23 23:53:25 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off e-clock -c LSD
+Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file 100f.bdf
+    Info (12023): Found entity 1: 100f
+Info (12021): Found 1 design units, including 1 entities, in source file cnt-100.bdf
+    Info (12023): Found entity 1: cnt-100
+Info (12021): Found 1 design units, including 1 entities, in source file cnt-25.bdf
+    Info (12023): Found entity 1: cnt-25
+Info (12021): Found 1 design units, including 1 entities, in source file cnt-2.bdf
+    Info (12023): Found entity 1: cnt-2
+Info (12021): Found 1 design units, including 1 entities, in source file mxh.bdf
+    Info (12023): Found entity 1: mxh
+Info (12021): Found 1 design units, including 1 entities, in source file lsd.bdf
+    Info (12023): Found entity 1: LSD
+Info (12021): Found 1 design units, including 1 entities, in source file clock.bdf
+    Info (12023): Found entity 1: CLOCK
+Info (12021): Found 1 design units, including 1 entities, in source file cnt100plus.bdf
+    Info (12023): Found entity 1: cnt100plus
+Info (12021): Found 1 design units, including 1 entities, in source file 74.bdf
+    Info (12023): Found entity 1: 74
+Info (12021): Found 1 design units, including 1 entities, in source file but.bdf
+    Info (12023): Found entity 1: but
+Info (12021): Found 1 design units, including 1 entities, in source file switch.bdf
+    Info (12023): Found entity 1: switch
+Info (12021): Found 1 design units, including 1 entities, in source file sec.bdf
+    Info (12023): Found entity 1: sec
+Info (12021): Found 1 design units, including 1 entities, in source file min.bdf
+    Info (12023): Found entity 1: min
+Info (12021): Found 1 design units, including 1 entities, in source file hour.bdf
+    Info (12023): Found entity 1: hour
+Info (12021): Found 1 design units, including 1 entities, in source file hour12.bdf
+    Info (12023): Found entity 1: hour12
+Info (12021): Found 1 design units, including 1 entities, in source file clock24.bdf
+    Info (12023): Found entity 1: clock24
+Info (12021): Found 1 design units, including 1 entities, in source file 7447pro.bdf
+    Info (12023): Found entity 1: 7447pro
+Info (12021): Found 1 design units, including 1 entities, in source file clk_5k.bdf
+    Info (12023): Found entity 1: clk_5k
+Info (12021): Found 1 design units, including 1 entities, in source file clk_100.bdf
+    Info (12023): Found entity 1: clk_100
+Info (12021): Found 1 design units, including 1 entities, in source file 7448pro.bdf
+    Info (12023): Found entity 1: 7448pro
+Info (12021): Found 1 design units, including 1 entities, in source file andpro.bdf
+    Info (12023): Found entity 1: ANDpro
+Info (12021): Found 1 design units, including 1 entities, in source file butpro.bdf
+    Info (12023): Found entity 1: butpro
+Info (12021): Found 1 design units, including 1 entities, in source file clk_2.bdf
+    Info (12023): Found entity 1: clk_2
+Info (12021): Found 1 design units, including 1 entities, in source file ledpro.bdf
+    Info (12023): Found entity 1: LEDpro
+Info (12021): Found 1 design units, including 1 entities, in source file 12-24.bdf
+    Info (12023): Found entity 1: 12-24
+Info (12021): Found 1 design units, including 1 entities, in source file 3c1.bdf
+    Info (12023): Found entity 1: 3c1
+Info (12021): Found 1 design units, including 1 entities, in source file 2c1.bdf
+    Info (12023): Found entity 1: 2c1
+Info (12021): Found 1 design units, including 1 entities, in source file clk_25.bdf
+    Info (12023): Found entity 1: clk_25
+Info (12127): Elaborating entity "clock24" for the top level hierarchy
+Warning (275008): Primitive "GND" of instance "inst8" not used
+Info (12128): Elaborating entity "LEDpro" for hierarchy "LEDpro:inst23"
+Info (12128): Elaborating entity "butpro" for hierarchy "butpro:inst9"
+Info (12128): Elaborating entity "but" for hierarchy "butpro:inst9|but:inst"
+Info (12128): Elaborating entity "clk_100" for hierarchy "clk_100:inst3"
+Info (12128): Elaborating entity "cnt-2" for hierarchy "clk_100:inst3|cnt-2:inst3"
+Info (12128): Elaborating entity "cnt-25" for hierarchy "clk_100:inst3|cnt-25:inst2"
+Info (12128): Elaborating entity "74160" for hierarchy "clk_100:inst3|cnt-25:inst2|74160:inst"
+Info (12130): Elaborated megafunction instantiation "clk_100:inst3|cnt-25:inst2|74160:inst"
+Info (12128): Elaborating entity "cnt-100" for hierarchy "clk_100:inst3|cnt-100:inst1"
+Info (12128): Elaborating entity "7447pro" for hierarchy "7447pro:inst11"
+Info (12128): Elaborating entity "7447" for hierarchy "7447pro:inst11|7447:inst"
+Info (12130): Elaborated megafunction instantiation "7447pro:inst11|7447:inst"
+Info (12128): Elaborating entity "ANDpro" for hierarchy "ANDpro:inst12"
+Info (12128): Elaborating entity "switch" for hierarchy "switch:inst"
+Info (12128): Elaborating entity "74138" for hierarchy "switch:inst|74138:inst2"
+Info (12130): Elaborated megafunction instantiation "switch:inst|74138:inst2"
+Info (12128): Elaborating entity "74161" for hierarchy "switch:inst|74161:inst"
+Info (12130): Elaborated megafunction instantiation "switch:inst|74161:inst"
+Info (12128): Elaborating entity "f74161" for hierarchy "switch:inst|74161:inst|f74161:sub"
+Info (12131): Elaborated megafunction instantiation "switch:inst|74161:inst|f74161:sub", which is child of megafunction instantiation "switch:inst|74161:inst"
+Warning (12125): Using design file clk_1k.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: clk_1k
+Info (12128): Elaborating entity "clk_1k" for hierarchy "clk_1k:inst35"
+Info (12128): Elaborating entity "2c1" for hierarchy "2c1:inst53"
+Info (12128): Elaborating entity "21mux" for hierarchy "2c1:inst53|21mux:inst2"
+Info (12130): Elaborated megafunction instantiation "2c1:inst53|21mux:inst2"
+Info (12128): Elaborating entity "100f" for hierarchy "100f:inst59"
+Info (12128): Elaborating entity "clk_25" for hierarchy "clk_25:inst60"
+Info (12128): Elaborating entity "sec" for hierarchy "sec:inst6"
+Info (12128): Elaborating entity "mxh" for hierarchy "mxh:inst1"
+Info (12128): Elaborating entity "min" for hierarchy "min:inst5"
+Warning (275009): Pin "SC" not connected
+Info (12128): Elaborating entity "clk_2" for hierarchy "clk_2:inst20"
+Info (12128): Elaborating entity "3c1" for hierarchy "3c1:inst50"
+Info (12128): Elaborating entity "74153" for hierarchy "3c1:inst50|74153:inst"
+Info (12130): Elaborated megafunction instantiation "3c1:inst50|74153:inst"
+Info (12128): Elaborating entity "hour12" for hierarchy "hour12:inst38"
+Warning (275009): Pin "SC" not connected
+Info (12128): Elaborating entity "hour" for hierarchy "hour:inst4"
+Warning (275009): Pin "SC" not connected
+Info (13014): Ignored 2 buffer(s)
+    Info (13015): Ignored 2 CARRY buffer(s)
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LED[7]" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "butin[7]"
+Info (21057): Implemented 392 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 21 output pins
+    Info (21061): Implemented 362 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4673 megabytes
+    Info: Processing ended: Tue May 23 23:53:27 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

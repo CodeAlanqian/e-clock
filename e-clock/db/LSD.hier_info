@@ -1,0 +1,2424 @@
+|clock24
+LED[7] <= LEDpro:inst23.LED[7]
+LED[6] <= LEDpro:inst23.LED[6]
+LED[5] <= LEDpro:inst23.LED[5]
+LED[4] <= LEDpro:inst23.LED[4]
+LED[3] <= LEDpro:inst23.LED[3]
+LED[2] <= LEDpro:inst23.LED[2]
+LED[1] <= LEDpro:inst23.LED[1]
+LED[0] <= LEDpro:inst23.LED[0]
+clk => clk_100:inst3.clk_50m
+clk => clk_1k:inst35.clk_50m
+clk => clk_25:inst60.clk_50m
+clk => mxh:inst1.clk_50m
+clk => clk_2:inst20.clk_50M
+butin[7] => butpro:inst9.K[7]
+butin[6] => butpro:inst9.K[6]
+butin[5] => butpro:inst9.K[5]
+butin[4] => butpro:inst9.K[4]
+butin[3] => butpro:inst9.K[3]
+butin[2] => butpro:inst9.K[2]
+butin[1] => butpro:inst9.K[1]
+butin[0] => butpro:inst9.K[0]
+O[0] <= 7447pro:inst11.O[0]
+O[1] <= 7447pro:inst11.O[1]
+O[2] <= 7447pro:inst11.O[2]
+O[3] <= 7447pro:inst11.O[3]
+O[4] <= 7447pro:inst11.O[4]
+O[5] <= 7447pro:inst11.O[5]
+O[6] <= 7447pro:inst11.O[6]
+S[5] <= switch:inst.S[5]
+S[4] <= switch:inst.S[4]
+S[3] <= switch:inst.S[3]
+S[2] <= switch:inst.S[2]
+S[1] <= switch:inst.S[1]
+S[0] <= switch:inst.S[0]
+
+
+|clock24|LEDpro:inst23
+LED[7] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+LED[6] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+LED[5] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+LED[0] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+L[7] => inst7.IN0
+L[6] => inst5.IN0
+L[5] => inst4.IN0
+L[4] => inst6.IN0
+L[3] => inst3.IN0
+L[2] => inst2.IN0
+L[1] => inst1.IN0
+L[0] => inst.IN0
+
+
+|clock24|butpro:inst9
+but[7] <= but:inst7.ButOutput
+but[6] <= but:inst6.ButOutput
+but[5] <= but:inst5.ButOutput
+but[4] <= but:inst4.ButOutput
+but[3] <= but:inst3.ButOutput
+but[2] <= but:inst2.ButOutput
+but[1] <= but:inst1.ButOutput
+but[0] <= but:inst.ButOutput
+K[7] => but:inst7.ButInput
+K[6] => but:inst6.ButInput
+K[5] => but:inst5.ButInput
+K[4] => but:inst4.ButInput
+K[3] => but:inst3.ButInput
+K[2] => but:inst2.ButInput
+K[1] => but:inst1.ButInput
+K[0] => but:inst.ButInput
+clk100 => but:inst.clk_100Hz
+clk100 => but:inst1.clk_100Hz
+clk100 => but:inst2.clk_100Hz
+clk100 => but:inst3.clk_100Hz
+clk100 => but:inst4.clk_100Hz
+clk100 => but:inst5.clk_100Hz
+clk100 => but:inst6.clk_100Hz
+clk100 => but:inst7.clk_100Hz
+
+
+|clock24|butpro:inst9|but:inst
+ButOutput <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+clk_100Hz => inst1.CLK
+clk_100Hz => inst.CLK
+clk_100Hz => inst2.CLK
+ButInput => inst.DATAIN
+
+
+|clock24|butpro:inst9|but:inst1
+ButOutput <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+clk_100Hz => inst1.CLK
+clk_100Hz => inst.CLK
+clk_100Hz => inst2.CLK
+ButInput => inst.DATAIN
+
+
+|clock24|butpro:inst9|but:inst2
+ButOutput <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+clk_100Hz => inst1.CLK
+clk_100Hz => inst.CLK
+clk_100Hz => inst2.CLK
+ButInput => inst.DATAIN
+
+
+|clock24|butpro:inst9|but:inst3
+ButOutput <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+clk_100Hz => inst1.CLK
+clk_100Hz => inst.CLK
+clk_100Hz => inst2.CLK
+ButInput => inst.DATAIN
+
+
+|clock24|butpro:inst9|but:inst4
+ButOutput <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+clk_100Hz => inst1.CLK
+clk_100Hz => inst.CLK
+clk_100Hz => inst2.CLK
+ButInput => inst.DATAIN
+
+
+|clock24|butpro:inst9|but:inst5
+ButOutput <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+clk_100Hz => inst1.CLK
+clk_100Hz => inst.CLK
+clk_100Hz => inst2.CLK
+ButInput => inst.DATAIN
+
+
+|clock24|butpro:inst9|but:inst6
+ButOutput <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+clk_100Hz => inst1.CLK
+clk_100Hz => inst.CLK
+clk_100Hz => inst2.CLK
+ButInput => inst.DATAIN
+
+
+|clock24|butpro:inst9|but:inst7
+ButOutput <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+clk_100Hz => inst1.CLK
+clk_100Hz => inst.CLK
+clk_100Hz => inst2.CLK
+ButInput => inst.DATAIN
+
+
+|clock24|clk_100:inst3
+clk_out_100 <= cnt-2:inst3.clk_out_1
+clk_50m => cnt-100:inst.clk_in_100
+
+
+|clock24|clk_100:inst3|cnt-2:inst3
+clk_out_1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk_in_2 => inst.CLK
+
+
+|clock24|clk_100:inst3|cnt-25:inst2
+clk_out_1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+clk_in_25 => 74160:inst.CLK
+clk_in_25 => 74160:inst1.CLK
+
+
+|clock24|clk_100:inst3|cnt-25:inst2|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_100:inst3|cnt-25:inst2|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_100:inst3|cnt-100:inst1
+clk_out_1 <= 74160:inst1.RCO
+clk_in_100 => 74160:inst1.CLK
+clk_in_100 => 74160:inst.CLK
+
+
+|clock24|clk_100:inst3|cnt-100:inst1|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_100:inst3|cnt-100:inst1|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_100:inst3|cnt-100:inst
+clk_out_1 <= 74160:inst1.RCO
+clk_in_100 => 74160:inst1.CLK
+clk_in_100 => 74160:inst.CLK
+
+
+|clock24|clk_100:inst3|cnt-100:inst|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_100:inst3|cnt-100:inst|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|7447pro:inst11
+O[0] <= 7447:inst.OA
+O[1] <= 7447:inst.OB
+O[2] <= 7447:inst.OC
+O[3] <= 7447:inst.OD
+O[4] <= 7447:inst.OE
+O[5] <= 7447:inst.OF
+O[6] <= 7447:inst.OG
+D[0] => 7447:inst.A
+D[1] => 7447:inst.B
+D[2] => 7447:inst.C
+D[3] => 7447:inst.D
+
+
+|clock24|7447pro:inst11|7447:inst
+OG <= 87.DB_MAX_OUTPUT_PORT_TYPE
+C => 25.IN0
+LTN => 25.IN1
+LTN => 27.IN1
+LTN => 29.IN1
+LTN => 13.IN5
+LTN => 38.IN3
+BIN => 37.IN0
+B => 27.IN0
+D => 14.IN0
+A => 29.IN0
+RBIN => 15.IN0
+OF <= 86.DB_MAX_OUTPUT_PORT_TYPE
+OE <= 85.DB_MAX_OUTPUT_PORT_TYPE
+RBON <= 13.DB_MAX_OUTPUT_PORT_TYPE
+OD <= 84.DB_MAX_OUTPUT_PORT_TYPE
+OC <= 83.DB_MAX_OUTPUT_PORT_TYPE
+OB <= 82.DB_MAX_OUTPUT_PORT_TYPE
+OA <= 81.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|ANDpro:inst12
+N3out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+S => inst4.IN0
+N3 => inst.IN1
+N2out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+N2 => inst1.IN1
+N1out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+N1 => inst2.IN1
+N0out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+N0 => inst3.IN1
+
+
+|clock24|switch:inst
+S[5] <= 74138:inst2.Y5N
+S[4] <= 74138:inst2.Y4N
+S[3] <= 74138:inst2.Y3N
+S[2] <= 74138:inst2.Y2N
+S[1] <= 74138:inst2.Y1N
+S[0] <= 74138:inst2.Y0N
+clk_1kHz => 74161:inst.CLK
+
+
+|clock24|switch:inst|74138:inst2
+Y7N <= 22.DB_MAX_OUTPUT_PORT_TYPE
+G1 => 8.IN0
+G2BN => 1.IN1
+G2AN => 1.IN2
+B => 10.IN0
+A => 9.IN0
+C => 11.IN0
+Y6N <= 21.DB_MAX_OUTPUT_PORT_TYPE
+Y5N <= 20.DB_MAX_OUTPUT_PORT_TYPE
+Y4N <= 19.DB_MAX_OUTPUT_PORT_TYPE
+Y3N <= 18.DB_MAX_OUTPUT_PORT_TYPE
+Y2N <= 17.DB_MAX_OUTPUT_PORT_TYPE
+Y1N <= 16.DB_MAX_OUTPUT_PORT_TYPE
+Y0N <= 15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|switch:inst|74161:inst
+clk => f74161:sub.clk
+ldn => f74161:sub.ldn
+clrn => f74161:sub.clrn
+enp => f74161:sub.enp
+ent => f74161:sub.ent
+d => f74161:sub.d
+c => f74161:sub.c
+b => f74161:sub.b
+a => f74161:sub.a
+qd <= f74161:sub.qd
+qc <= f74161:sub.qc
+qb <= f74161:sub.qb
+qa <= f74161:sub.qa
+rco <= f74161:sub.rco
+
+
+|clock24|switch:inst|74161:inst|f74161:sub
+RCO <= 105.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => 110.ACLR
+CLRN => 99.ACLR
+CLRN => 87.ACLR
+CLRN => 9.ACLR
+CLK => 110.CLK
+CLK => 99.CLK
+CLK => 87.CLK
+CLK => 9.CLK
+D => 113.IN0
+LDN => 117.IN0
+LDN => 77.IN1
+LDN => 86.IN1
+LDN => 98.IN1
+LDN => 108.IN1
+ENP => 106.IN0
+ENP => 96.IN0
+ENP => 89.IN0
+ENP => 79.IN0
+C => 101.IN0
+B => 91.IN0
+A => 76.IN0
+ENT => 82.DATAIN
+QD <= 110.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 99.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 87.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_1k:inst35
+clk_out_1k <= cnt-2:inst2.clk_out_1
+clk_50m => cnt-100:inst3.clk_in_100
+
+
+|clock24|clk_1k:inst35|cnt-2:inst2
+clk_out_1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk_in_2 => inst.CLK
+
+
+|clock24|clk_1k:inst35|cnt-2:inst1
+clk_out_1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk_in_2 => inst.CLK
+
+
+|clock24|clk_1k:inst35|cnt-100:inst
+clk_out_1 <= 74160:inst1.RCO
+clk_in_100 => 74160:inst1.CLK
+clk_in_100 => 74160:inst.CLK
+
+
+|clock24|clk_1k:inst35|cnt-100:inst|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_1k:inst35|cnt-100:inst|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_1k:inst35|cnt-100:inst3
+clk_out_1 <= 74160:inst1.RCO
+clk_in_100 => 74160:inst1.CLK
+clk_in_100 => 74160:inst.CLK
+
+
+|clock24|clk_1k:inst35|cnt-100:inst3|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_1k:inst35|cnt-100:inst3|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|2c1:inst53
+R[0] <= 21mux:inst4.Y
+R[1] <= 21mux:inst3.Y
+R[2] <= 21mux:inst2.Y
+R[3] <= 21mux:inst1.Y
+K => 21mux:inst2.S
+K => 21mux:inst3.S
+K => 21mux:inst4.S
+K => 21mux:inst1.S
+H24[0] => 21mux:inst4.B
+H24[1] => 21mux:inst3.B
+H24[2] => 21mux:inst2.B
+H24[3] => 21mux:inst1.B
+H12[0] => 21mux:inst4.A
+H12[1] => 21mux:inst3.A
+H12[2] => 21mux:inst2.A
+H12[3] => 21mux:inst1.A
+
+
+|clock24|2c1:inst53|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|2c1:inst53|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|2c1:inst53|21mux:inst4
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|2c1:inst53|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|100f:inst59
+SC <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+clk_100Hz => 74160:inst1.CLK
+clk_100Hz => 74160:inst.CLK
+RD => 74160:inst.CLRN
+RD => 74160:inst1.CLRN
+SH[0] <= 74160:inst1.QA
+SH[1] <= 74160:inst1.QB
+SH[2] <= 74160:inst1.QC
+SH[3] <= 74160:inst1.QD
+SL[0] <= 74160:inst.QA
+SL[1] <= 74160:inst.QB
+SL[2] <= 74160:inst.QC
+SL[3] <= 74160:inst.QD
+
+
+|clock24|100f:inst59|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|100f:inst59|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_25:inst60
+clk_out_100 <= cnt-2:inst5.clk_out_1
+clk_50m => cnt-100:inst.clk_in_100
+
+
+|clock24|clk_25:inst60|cnt-2:inst5
+clk_out_1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk_in_2 => inst.CLK
+
+
+|clock24|clk_25:inst60|cnt-2:inst3
+clk_out_1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk_in_2 => inst.CLK
+
+
+|clock24|clk_25:inst60|cnt-25:inst2
+clk_out_1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+clk_in_25 => 74160:inst.CLK
+clk_in_25 => 74160:inst1.CLK
+
+
+|clock24|clk_25:inst60|cnt-25:inst2|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_25:inst60|cnt-25:inst2|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_25:inst60|cnt-100:inst1
+clk_out_1 <= 74160:inst1.RCO
+clk_in_100 => 74160:inst1.CLK
+clk_in_100 => 74160:inst.CLK
+
+
+|clock24|clk_25:inst60|cnt-100:inst1|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_25:inst60|cnt-100:inst1|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_25:inst60|cnt-100:inst
+clk_out_1 <= 74160:inst1.RCO
+clk_in_100 => 74160:inst1.CLK
+clk_in_100 => 74160:inst.CLK
+
+
+|clock24|clk_25:inst60|cnt-100:inst|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_25:inst60|cnt-100:inst|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|sec:inst6
+SC <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+SL[0] <= 74160:inst.QA
+SL[1] <= 74160:inst.QB
+SL[2] <= 74160:inst.QC
+SL[3] <= 74160:inst.QD
+clk_1Hz => 74160:inst.CLK
+clk_1Hz => 74160:inst1.CLK
+RD => 74160:inst.CLRN
+RD => 74160:inst1.CLRN
+SH[0] <= 74160:inst1.QA
+SH[1] <= 74160:inst1.QB
+SH[2] <= 74160:inst1.QC
+SH[3] <= 74160:inst1.QD
+
+
+|clock24|sec:inst6|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|sec:inst6|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|mxh:inst1
+clk_1Hz <= cnt-2:inst5.clk_out_1
+clk_50m => cnt-100:inst.clk_in_100
+
+
+|clock24|mxh:inst1|cnt-2:inst5
+clk_out_1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+clk_in_2 => inst.CLK
+
+
+|clock24|mxh:inst1|cnt-25:inst4
+clk_out_1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+clk_in_25 => 74160:inst.CLK
+clk_in_25 => 74160:inst1.CLK
+
+
+|clock24|mxh:inst1|cnt-25:inst4|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|mxh:inst1|cnt-25:inst4|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|mxh:inst1|cnt-100:inst3
+clk_out_1 <= 74160:inst1.RCO
+clk_in_100 => 74160:inst1.CLK
+clk_in_100 => 74160:inst.CLK
+
+
+|clock24|mxh:inst1|cnt-100:inst3|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|mxh:inst1|cnt-100:inst3|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|mxh:inst1|cnt-100:inst2
+clk_out_1 <= 74160:inst1.RCO
+clk_in_100 => 74160:inst1.CLK
+clk_in_100 => 74160:inst.CLK
+
+
+|clock24|mxh:inst1|cnt-100:inst2|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|mxh:inst1|cnt-100:inst2|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|mxh:inst1|cnt-100:inst
+clk_out_1 <= 74160:inst1.RCO
+clk_in_100 => 74160:inst1.CLK
+clk_in_100 => 74160:inst.CLK
+
+
+|clock24|mxh:inst1|cnt-100:inst|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|mxh:inst1|cnt-100:inst|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|ANDpro:inst14
+N3out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+S => inst4.IN0
+N3 => inst.IN1
+N2out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+N2 => inst1.IN1
+N1out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+N1 => inst2.IN1
+N0out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+N0 => inst3.IN1
+
+
+|clock24|2c1:inst55
+R[0] <= 21mux:inst4.Y
+R[1] <= 21mux:inst3.Y
+R[2] <= 21mux:inst2.Y
+R[3] <= 21mux:inst1.Y
+K => 21mux:inst2.S
+K => 21mux:inst3.S
+K => 21mux:inst4.S
+K => 21mux:inst1.S
+H24[0] => 21mux:inst4.B
+H24[1] => 21mux:inst3.B
+H24[2] => 21mux:inst2.B
+H24[3] => 21mux:inst1.B
+H12[0] => 21mux:inst4.A
+H12[1] => 21mux:inst3.A
+H12[2] => 21mux:inst2.A
+H12[3] => 21mux:inst1.A
+
+
+|clock24|2c1:inst55|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|2c1:inst55|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|2c1:inst55|21mux:inst4
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|2c1:inst55|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|sec:inst34
+SC <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+SL[0] <= 74160:inst.QA
+SL[1] <= 74160:inst.QB
+SL[2] <= 74160:inst.QC
+SL[3] <= 74160:inst.QD
+clk_1Hz => 74160:inst.CLK
+clk_1Hz => 74160:inst1.CLK
+RD => 74160:inst.CLRN
+RD => 74160:inst1.CLRN
+SH[0] <= 74160:inst1.QA
+SH[1] <= 74160:inst1.QB
+SH[2] <= 74160:inst1.QC
+SH[3] <= 74160:inst1.QD
+
+
+|clock24|sec:inst34|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|sec:inst34|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|min:inst5
+MC <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+ML[0] <= 74160:inst.QA
+ML[1] <= 74160:inst.QB
+ML[2] <= 74160:inst.QC
+ML[3] <= 74160:inst.QD
+min_clk => 74160:inst.CLK
+min_clk => 74160:inst1.CLK
+RD => 74160:inst.CLRN
+RD => 74160:inst1.CLRN
+MH[0] <= 74160:inst1.QA
+MH[1] <= 74160:inst1.QB
+MH[2] <= 74160:inst1.QC
+MH[3] <= 74160:inst1.QD
+SC => ~NO_FANOUT~
+
+
+|clock24|min:inst5|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|min:inst5|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_2:inst20
+clk_2 <= cnt-25:inst1.clk_out_1
+clk_50M => cnt-100:inst.clk_in_100
+
+
+|clock24|clk_2:inst20|cnt-25:inst1
+clk_out_1 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+clk_in_25 => 74160:inst.CLK
+clk_in_25 => 74160:inst1.CLK
+
+
+|clock24|clk_2:inst20|cnt-25:inst1|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_2:inst20|cnt-25:inst1|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_2:inst20|cnt-100:inst7
+clk_out_1 <= 74160:inst1.RCO
+clk_in_100 => 74160:inst1.CLK
+clk_in_100 => 74160:inst.CLK
+
+
+|clock24|clk_2:inst20|cnt-100:inst7|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_2:inst20|cnt-100:inst7|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_2:inst20|cnt-100:inst8
+clk_out_1 <= 74160:inst1.RCO
+clk_in_100 => 74160:inst1.CLK
+clk_in_100 => 74160:inst.CLK
+
+
+|clock24|clk_2:inst20|cnt-100:inst8|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_2:inst20|cnt-100:inst8|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_2:inst20|cnt-100:inst
+clk_out_1 <= 74160:inst1.RCO
+clk_in_100 => 74160:inst1.CLK
+clk_in_100 => 74160:inst.CLK
+
+
+|clock24|clk_2:inst20|cnt-100:inst|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|clk_2:inst20|cnt-100:inst|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|ANDpro:inst13
+N3out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+S => inst4.IN0
+N3 => inst.IN1
+N2out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+N2 => inst1.IN1
+N1out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+N1 => inst2.IN1
+N0out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+N0 => inst3.IN1
+
+
+|clock24|2c1:inst54
+R[0] <= 21mux:inst4.Y
+R[1] <= 21mux:inst3.Y
+R[2] <= 21mux:inst2.Y
+R[3] <= 21mux:inst1.Y
+K => 21mux:inst2.S
+K => 21mux:inst3.S
+K => 21mux:inst4.S
+K => 21mux:inst1.S
+H24[0] => 21mux:inst4.B
+H24[1] => 21mux:inst3.B
+H24[2] => 21mux:inst2.B
+H24[3] => 21mux:inst1.B
+H12[0] => 21mux:inst4.A
+H12[1] => 21mux:inst3.A
+H12[2] => 21mux:inst2.A
+H12[3] => 21mux:inst1.A
+
+
+|clock24|2c1:inst54|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|2c1:inst54|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|2c1:inst54|21mux:inst4
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|2c1:inst54|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|ANDpro:inst15
+N3out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+S => inst4.IN0
+N3 => inst.IN1
+N2out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+N2 => inst1.IN1
+N1out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+N1 => inst2.IN1
+N0out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+N0 => inst3.IN1
+
+
+|clock24|2c1:inst56
+R[0] <= 21mux:inst4.Y
+R[1] <= 21mux:inst3.Y
+R[2] <= 21mux:inst2.Y
+R[3] <= 21mux:inst1.Y
+K => 21mux:inst2.S
+K => 21mux:inst3.S
+K => 21mux:inst4.S
+K => 21mux:inst1.S
+H24[0] => 21mux:inst4.B
+H24[1] => 21mux:inst3.B
+H24[2] => 21mux:inst2.B
+H24[3] => 21mux:inst1.B
+H12[0] => 21mux:inst4.A
+H12[1] => 21mux:inst3.A
+H12[2] => 21mux:inst2.A
+H12[3] => 21mux:inst1.A
+
+
+|clock24|2c1:inst56|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|2c1:inst56|21mux:inst3
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|2c1:inst56|21mux:inst4
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|2c1:inst56|21mux:inst1
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|clock24|ANDpro:inst16
+N3out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+S => inst4.IN0
+N3 => inst.IN1
+N2out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+N2 => inst1.IN1
+N1out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+N1 => inst2.IN1
+N0out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+N0 => inst3.IN1
+
+
+|clock24|3c1:inst50
+R[0] <= 74153:inst10.1Y
+R[1] <= 74153:inst8.1Y
+R[2] <= 74153:inst6.1Y
+R[3] <= 74153:inst.1Y
+M60[0] => 74153:inst10.1C1
+M60[0] => 74153:inst10.1C0
+M60[1] => 74153:inst8.1C1
+M60[1] => 74153:inst8.1C0
+M60[2] => 74153:inst6.1C1
+M60[2] => 74153:inst6.1C0
+M60[3] => 74153:inst.1C1
+M60[3] => 74153:inst.1C0
+H12[0] => 74153:inst10.1C2
+H12[1] => 74153:inst8.1C2
+H12[2] => 74153:inst6.1C2
+H12[3] => 74153:inst.1C2
+H24[0] => 74153:inst10.1C3
+H24[1] => 74153:inst8.1C3
+H24[2] => 74153:inst6.1C3
+H24[3] => 74153:inst.1C3
+K4 => 74153:inst.B
+K4 => 74153:inst6.B
+K4 => 74153:inst8.B
+K4 => 74153:inst10.B
+K0 => 74153:inst.A
+K0 => 74153:inst6.A
+K0 => 74153:inst8.A
+K0 => 74153:inst10.A
+
+
+|clock24|3c1:inst50|74153:inst
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+
+|clock24|3c1:inst50|74153:inst6
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+
+|clock24|3c1:inst50|74153:inst8
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+
+|clock24|3c1:inst50|74153:inst10
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+
+|clock24|hour12:inst38
+HC <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+HL[0] <= 74160:inst.QA
+HL[1] <= 74160:inst.QB
+HL[2] <= 74160:inst.QC
+HL[3] <= 74160:inst.QD
+hour_clk => 74160:inst.CLK
+hour_clk => 74160:inst1.CLK
+RD => 74160:inst.CLRN
+RD => 74160:inst1.CLRN
+HH[0] <= 74160:inst1.QA
+HH[1] <= 74160:inst1.QB
+HH[2] <= 74160:inst1.QC
+HH[3] <= 74160:inst1.QD
+SC => ~NO_FANOUT~
+
+
+|clock24|hour12:inst38|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|hour12:inst38|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|hour:inst4
+HC <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+HL[0] <= 74160:inst.QA
+HL[1] <= 74160:inst.QB
+HL[2] <= 74160:inst.QC
+HL[3] <= 74160:inst.QD
+hour_clk => 74160:inst.CLK
+hour_clk => 74160:inst1.CLK
+RD => 74160:inst.CLRN
+RD => 74160:inst1.CLRN
+HH[0] <= 74160:inst1.QA
+HH[1] <= 74160:inst1.QB
+HH[2] <= 74160:inst1.QC
+HH[3] <= 74160:inst1.QD
+SC => ~NO_FANOUT~
+
+
+|clock24|hour:inst4|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|hour:inst4|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|min:inst36
+MC <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+ML[0] <= 74160:inst.QA
+ML[1] <= 74160:inst.QB
+ML[2] <= 74160:inst.QC
+ML[3] <= 74160:inst.QD
+min_clk => 74160:inst.CLK
+min_clk => 74160:inst1.CLK
+RD => 74160:inst.CLRN
+RD => 74160:inst1.CLRN
+MH[0] <= 74160:inst1.QA
+MH[1] <= 74160:inst1.QB
+MH[2] <= 74160:inst1.QC
+MH[3] <= 74160:inst1.QD
+SC => ~NO_FANOUT~
+
+
+|clock24|min:inst36|74160:inst
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|min:inst36|74160:inst1
+RCO <= 45.DB_MAX_OUTPUT_PORT_TYPE
+ENT => 45.IN0
+ENT => 47.IN0
+ENT => 65.IN0
+CLRN => 6.ACLR
+CLRN => 9.ACLR
+CLRN => 8.ACLR
+CLRN => 7.ACLR
+CLK => 6.CLK
+CLK => 9.CLK
+CLK => 8.CLK
+CLK => 7.CLK
+LDN => 32.IN0
+LDN => 47.IN2
+LDN => 33.IN0
+LDN => 49.IN1
+LDN => 27.IN0
+LDN => 30.IN0
+ENP => 47.IN1
+ENP => 65.IN1
+A => 31.IN0
+D => 24.IN0
+C => 26.IN0
+B => 29.IN0
+QD <= 9.DB_MAX_OUTPUT_PORT_TYPE
+QC <= 8.DB_MAX_OUTPUT_PORT_TYPE
+QB <= 7.DB_MAX_OUTPUT_PORT_TYPE
+QA <= 6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|clock24|ANDpro:inst17
+N3out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+S => inst4.IN0
+N3 => inst.IN1
+N2out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+N2 => inst1.IN1
+N1out <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+N1 => inst2.IN1
+N0out <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+N0 => inst3.IN1
+
+
+|clock24|3c1:inst57
+R[0] <= 74153:inst10.1Y
+R[1] <= 74153:inst8.1Y
+R[2] <= 74153:inst6.1Y
+R[3] <= 74153:inst.1Y
+M60[0] => 74153:inst10.1C1
+M60[0] => 74153:inst10.1C0
+M60[1] => 74153:inst8.1C1
+M60[1] => 74153:inst8.1C0
+M60[2] => 74153:inst6.1C1
+M60[2] => 74153:inst6.1C0
+M60[3] => 74153:inst.1C1
+M60[3] => 74153:inst.1C0
+H12[0] => 74153:inst10.1C2
+H12[1] => 74153:inst8.1C2
+H12[2] => 74153:inst6.1C2
+H12[3] => 74153:inst.1C2
+H24[0] => 74153:inst10.1C3
+H24[1] => 74153:inst8.1C3
+H24[2] => 74153:inst6.1C3
+H24[3] => 74153:inst.1C3
+K4 => 74153:inst.B
+K4 => 74153:inst6.B
+K4 => 74153:inst8.B
+K4 => 74153:inst10.B
+K0 => 74153:inst.A
+K0 => 74153:inst6.A
+K0 => 74153:inst8.A
+K0 => 74153:inst10.A
+
+
+|clock24|3c1:inst57|74153:inst
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+
+|clock24|3c1:inst57|74153:inst6
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+
+|clock24|3c1:inst57|74153:inst8
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+
+|clock24|3c1:inst57|74153:inst10
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+
